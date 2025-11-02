@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 int main(){
-	int n, check, var;
+	int n, var;
 	printf("Nhap so phan tu:");
 	scanf("%d",&n);
-	int arr[n];
-	while (1){
+	int arr[n], close=1;
+	while (close){
+		int check=0;
 		printf("Nhap phan tu (so le):");
 		for (int i=0; i<n; i++){
 			scanf("%d",&arr[i]);
@@ -20,7 +21,7 @@ int main(){
 			for (int i=0;i<n;i++){
 				printf("%d ",arr[i]);
 			}
-			break;
+			close=0;
 		} else {
 			printf("Nhap lai\n");
 			continue;
